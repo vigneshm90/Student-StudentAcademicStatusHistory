@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "26e24e80-1c84-4717-a640-51a3ebae9f47",
+		"name": "StudentAccountPendingTransaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32629573"
+	},
+	"item": [
+		{
+			"name": "GetPendingTransactionByStudentIdAndTranactionId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://{{domain}}/ds/campusnexus/StudentAccountPendingTransactions/CampusNexus.GetStudentAccountPendingCharges(studentId={{studentId}},pendingChargeId={{pendingChargeId}})"
+			},
+			"response": []
+		},
+		{
+			"name": "GetPendingTransactionById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "GK$AI2024",
+						"username": "gkumar@700031cm.onmicrosoft.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://{{domain}}/ds/campusnexus/StudentAccountPendingTransactions({{transactionId}})"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPendingTransactions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://{{domain}}/ds/campusnexus/StudentAccountPendingTransactions"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "_userName",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "_password",
+			"type": "string"
+		},
+		{
+			"key": "domain",
+			"value": "_domainName",
+			"type": "string"
+		},
+		{
+			"key": "studentId",
+			"value": "_studentId",
+			"type": "string"
+		},
+		{
+			"key": "transactionId",
+			"value": "_transactionId",
+			"type": "string"
+		},
+		{
+			"key": "pendingChargeId",
+			"value": "_pendingChargeId",
+			"type": "string"
+		}
+	]
+}
